@@ -4,16 +4,31 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7EA766B6-C51C-4D73-856D-A57B8BC1FB5E}</ProjectGuid>
+    <ProjectGuid>{9C15F54D-1052-4EFA-A11B-DE951942B799}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Rozbudowana_Biblioteka</RootNamespace>
-    <AssemblyName>Rozbudowana Biblioteka</AssemblyName>
+    <RootNamespace>Rozbudowana_biblioteka</RootNamespace>
+    <AssemblyName>Rozbudowana biblioteka</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -35,7 +50,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
@@ -55,6 +77,66 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="BibliotekaDBContext.cs" />
+    <Compile Include="Model\AutorKsiazki.cs" />
+    <Compile Include="Model\CzyCzytelnikPosiadaWypozyczoneKsiazki.cs" />
+    <Compile Include="Model\CzyksiazkaWypozyczona.cs" />
+    <Compile Include="Model\Czytelnik.cs" />
+    <Compile Include="Model\DaneKontaktoweOsob.cs" />
+    <Compile Include="Model\Grafik.cs" />
+    <Compile Include="Model\Ksiazka.cs" />
+    <Compile Include="Model\Log.cs" />
+    <Compile Include="Model\PelnionaFunkcja.cs" />
+    <Compile Include="Model\Status.cs" />
+    <Compile Include="Model\UserLogowanie.cs" />
+    <Compile Include="Model\Wiadomosci.cs" />
+    <Compile Include="Model\WypozyczenieKsiazki.cs" />
+    <Compile Include="Model\ZmianaWPracy.cs" />
+    <Compile Include="Wins\BibliotekaMain.xaml.cs">
+      <DependentUpon>BibliotekaMain.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Wins\DodajCzytelnika.xaml.cs">
+      <DependentUpon>DodajCzytelnika.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Wins\DodajKsiazke.xaml.cs">
+      <DependentUpon>DodajKsiazke.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Wins\DodajPracownika.xaml.cs">
+      <DependentUpon>DodajPracownika.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Wins\Logowanie_Admin.xaml.cs">
+      <DependentUpon>Logowanie_Admin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Wins\Panel_Administratora.xaml.cs">
+      <DependentUpon>Panel_Administratora.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Wins\StatusCzytelnika.xaml.cs">
+      <DependentUpon>StatusCzytelnika.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Wins\StatusKsiazki.xaml.cs">
+      <DependentUpon>StatusKsiazki.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Wins\UsunCzytelnika.xaml.cs">
+      <DependentUpon>UsunCzytelnika.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Wins\UsunKsiazke.xaml.cs">
+      <DependentUpon>UsunKsiazke.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Wins\UsunOsobeAdmin.xaml.cs">
+      <DependentUpon>UsunOsobeAdmin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Wins\Wiadomosc.xaml.cs">
+      <DependentUpon>Wiadomosc.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Wins\Wiadomosci_Admin.xaml.cs">
+      <DependentUpon>Wiadomosci_Admin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Wins\WypozyczKsiazke.xaml.cs">
+      <DependentUpon>WypozyczKsiazke.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Wins\ZwrotKsiazki.xaml.cs">
+      <DependentUpon>ZwrotKsiazki.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -67,6 +149,66 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Wins\BibliotekaMain.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Wins\DodajCzytelnika.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Wins\DodajKsiazke.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Wins\DodajPracownika.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Wins\Logowanie_Admin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Wins\Panel_Administratora.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Wins\StatusCzytelnika.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Wins\StatusKsiazki.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Wins\UsunCzytelnika.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Wins\UsunKsiazke.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Wins\UsunOsobeAdmin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Wins\Wiadomosc.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Wins\Wiadomosci_Admin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Wins\WypozyczKsiazke.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Wins\ZwrotKsiazki.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -86,13 +228,33 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.SqlServer.SqlLocalDB.11.1">
+      <Visible>False</Visible>
+      <ProductName>SQL Server 2012 Express LocalDB</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

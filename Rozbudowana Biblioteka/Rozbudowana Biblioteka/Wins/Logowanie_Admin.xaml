@@ -1,0 +1,23 @@
+﻿<Window x:Class="Rozbudowana_biblioteka.Wins.Logowanie_Admin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Rozbudowana_biblioteka.Wins"
+        mc:Ignorable="d"
+        Title="Logowanie_Admin" Height="150" Width="250" WindowStartupLocation="CenterScreen">
+    <Grid Background="OrangeRed">
+        <StackPanel Height="25" VerticalAlignment="Top" Margin="5">
+            <TextBlock HorizontalAlignment="Center" FontSize="16" FontWeight="Bold">Logowanie jako administrator</TextBlock>
+        </StackPanel>
+        <UniformGrid Width="200" Height="50" Columns="2"  >
+            <Label HorizontalAlignment="Right">Login:</Label>
+            <TextBox x:Name="AdminLoginTXTBox" Margin="2"></TextBox>
+            <Label HorizontalAlignment="Right">Password:</Label>
+            <PasswordBox x:Name="AdminLoginPSWDBox" Margin="2"></PasswordBox>
+        </UniformGrid>
+        <StackPanel Height="30" VerticalAlignment="Bottom">
+            <Button x:Name="AdminLoginBTN" Width="100" Background="MediumVioletRed" Click="AdminLoginBTNClick">Login</Button>
+        </StackPanel>
+    </Grid>
+</Window>

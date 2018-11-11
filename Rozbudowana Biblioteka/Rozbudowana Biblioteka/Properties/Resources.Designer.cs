@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Rozbudowana_Biblioteka.Properties
+namespace Rozbudowana_biblioteka.Properties
 {
 
 
@@ -44,7 +44,7 @@ namespace Rozbudowana_Biblioteka.Properties
             {
                 if ((resourceMan == null))
                 {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Rozbudowana_Biblioteka.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Rozbudowana_biblioteka.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

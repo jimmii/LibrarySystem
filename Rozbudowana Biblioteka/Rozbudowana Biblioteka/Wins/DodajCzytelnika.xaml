@@ -1,0 +1,36 @@
+﻿<Window x:Class="Rozbudowana_biblioteka.Wins.DodajCzytelnika"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Rozbudowana_biblioteka.Wins"
+        mc:Ignorable="d"
+        Title="DodajCzytelnika" Height="570" Width="300">
+    <Grid Background="GreenYellow">
+        <UniformGrid Columns="2" Height="480"  VerticalAlignment="Top" Margin="10">
+            <Label Margin="10">Imie:</Label>
+            <TextBox x:Name="ImieCRTACCTxtBox" Margin="10"></TextBox>
+            <Label Margin="10">Nazwisko:</Label>
+            <TextBox x:Name="NazwiskoCRTACCTxtBox" Margin="10"></TextBox>
+            <Label Margin="10">DataUr(tylko rok):</Label>
+            <TextBox x:Name="DataUrCRTACCTxtBox" Margin="10"></TextBox>
+            <Label Margin="10">Plec(K/M):</Label>
+            <TextBox x:Name="PlecCRTACCTxtBox" Margin="10"></TextBox>
+            <Label Margin="10">Ulica:</Label>
+            <TextBox x:Name="UlicaCRTACCTxtBox" Margin="10"></TextBox>
+            <Label Margin="10">Nr Ulicy:</Label>
+            <TextBox x:Name="NrUlicyCRTACCTxtBox" Margin="10"></TextBox>
+            <Label Margin="10">NrMieszkania:</Label>
+            <TextBox x:Name="NrMieszkaniaCRTACCTxtBox" Margin="10"></TextBox>
+            <Label Margin="10">Kod pocztowy:</Label>
+            <TextBox x:Name="KodPocztowyCRTACCTxtBox" Margin="10"></TextBox>
+            <Label Margin="10">Miasto:</Label>
+            <TextBox x:Name="MiastoCRTACCTxtBox" Margin="10"></TextBox>
+            <Label Margin="10">Nr telefonu:</Label>
+            <TextBox x:Name="NrTLFCRTACCTxtBox" Margin="10"></TextBox>
+            <Label Margin="10">Email:</Label>
+            <TextBox x:Name="EmailCRTACCTxtBox" Margin="10"></TextBox>
+        </UniformGrid>
+        <Button x:Name="ConfirmCRTACCBTN" Width="120" Height="35" VerticalAlignment="Bottom" Background="YellowGreen" Margin="10" Click="ConfirmCRTACCBTN_Click" >Confirm</Button>
+    </Grid>
+</Window>

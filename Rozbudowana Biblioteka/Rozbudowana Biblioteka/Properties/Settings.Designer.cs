@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Rozbudowana_Biblioteka.Properties
+namespace Rozbudowana_biblioteka.Properties
 {
 
 
